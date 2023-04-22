@@ -1,5 +1,7 @@
 import express from 'express';
 import configViewEngine from './configs/viewEngine';
+import initWebRoute from './route/web';
+
 require('dotenv').config();
 const morgan = require('morgan');
 const path = require('path');
@@ -9,15 +11,12 @@ const port = process.env.PORT || 3000;
 
 // app.use(morgan('combined'));
 
+
+//Set up view engine
 configViewEngine(app);
 
-app.get('/', function (req, res) {
-    res.render('index.ejs')
-});
-
-app.get('/about', function (req, res) {
-    res.send('Tui ten la Mi')
-})
+//init webroute
+initWebRoute(app);
 
 app.listen(port, () => {
     console.log('Example app listening att http://localhost:3000')
