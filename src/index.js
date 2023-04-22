@@ -1,9 +1,11 @@
-//const express = require('express');
 import express from 'express';
 import configViewEngine from './configs/viewEngine';
+require('dotenv').config();
 const morgan = require('morgan');
 const path = require('path');
+
 const app = express();
+const port = process.env.PORT || 3000;
 
 // app.use(morgan('combined'));
 
@@ -17,10 +19,6 @@ app.get('/about', function (req, res) {
     res.send('Tui ten la Mi')
 })
 
-app.get('/newss', function (req, res) {
-    res.send('Tui ten la Mi')
-})
-
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Example app listening att http://localhost:3000')
 })
