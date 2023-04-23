@@ -11,11 +11,11 @@ let getHomepage = (req, res) => {
                     id: row.id,
                     email: row.email,
                     address: row.address,
-                    firstname: row.fName,
+                    firstName: row.fName,
                     lastName: row.lName,
                 })
             });
-            return res.render('index.ejs', { dataUser: JSON.stringify(data) });
+            return res.render('index.ejs', { dataUser: data });
         }
     );
 }
