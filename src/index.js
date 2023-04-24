@@ -1,7 +1,6 @@
 import express from 'express';
 import configViewEngine from './configs/viewEngine';
 import initWebRoute from './route/web';
-import connection from './config/connectDB';
 
 require('dotenv').config();
 const morgan = require('morgan');
@@ -12,6 +11,8 @@ const port = process.env.PORT || 3000;
 
 // app.use(morgan('combined'));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //Set up view engine
 configViewEngine(app);

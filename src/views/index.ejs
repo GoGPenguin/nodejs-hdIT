@@ -17,6 +17,7 @@
         <a href="#about">About</a>
     </div>
 
+    <!-- Table -->
     <div>
         <table>
             <h2>List users</h2>
@@ -48,6 +49,36 @@
                     <% } %>
             </tbody>
         </table>
+    </div>
+
+    <!-- Form -->
+    <div class="create-user-container">
+        <div style="text-align: center;">
+            <h2>Create new user</h2>
+        </div>
+        <div  style="margin-left: 41%;">
+            <form action="/create-new-user" method="post" style="width: 250px;">
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <label for="">Firstname</label>
+                    <input type="text" name="firstName">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <label for="">Lastname</label>
+                    <input type="text" name="lastName">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <label for="">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <label for="">Address</label>
+                    <input type="text" name="address">
+                </div>
+                <div style="margin-top: 25px; text-align: center; ">
+                    <button type="submit" style="cursor: pointer;">Submit</button>
+                </div>
+            </form>
+        </div> 
     </div>
 </body>
 
