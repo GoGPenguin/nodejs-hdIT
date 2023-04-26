@@ -12,6 +12,12 @@ const initWebRoute = (app) => {
 
     router.get('/about', aboutController.getAboutpage);
 
+    router.post('/delete-user', homeController.deleteUser);
+
+    router.get('/update-user/:id', homeController.updateUser); 
+
+    router.post('/edit-user', homeController.editUser);
+
     return app.use('/', router)
 }
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="create-user-container">
+        <div style="text-align: center;">
+            <h2>Update new user</h2>
+        </div>
+        <div  style="margin-left: 41%;">
+            <form action="/edit-user" method="post" style="width: 250px;">
+                <div style="margin: 10px 0; width: 100%; display: flex; justify-content: space-between;">
+                    <label for="">Firstname</label>
+                    <input type="text" name="firstName" value="<%= information[0].fName %>">
+                </div>
+                <div style="margin: 10px 0; width: 100%; display: flex; justify-content: space-between;">
+                    <label for="">Lastname</label>
+                    <input type="text" name="lastName" value="<%= information[0].lName %>">
+                </div>
+                <div style="margin: 10px 0; width: 100%; display: flex; justify-content: space-between;">
+                    <label for="">Email</label>
+                    <input type="email" name="email" value="<%= information[0].email %>"> 
+                </div>
+                <div style="margin: 10px 0; width: 100%; display: flex; justify-content: space-between;">
+                    <label for="">Address</label>
+                    <input type="text" name="address" value="<%= information[0].address %>">
+                </div>
+                <input type="text" hidden name="userId" value="<%= information[0].id %>" >
+                <div style="margin-top: 25px;">
+                    <button type="submit" style="cursor: pointer;">Submit</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+</body>
+</html>

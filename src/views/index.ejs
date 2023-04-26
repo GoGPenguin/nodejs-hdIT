@@ -42,8 +42,13 @@
                         </td>
                         <td>
                             <a href="/detail/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
+                            <form action="/update-user/<%= dataUser[i].id %>" method="get" style="display: inline-block;">
+                                <button type="submit">Edit</button>
+                            </form>
+                            <form action="/delete-user" method="post" style="display: inline-block;">
+                                <input type="text" hidden name="userId" value="<%= dataUser[i].id %>" >
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <% } %>
