@@ -1,6 +1,8 @@
 import express from 'express';
 import configViewEngine from './configs/viewEngine';
 import initWebRoute from './route/web';
+import initAPIRoute from './route/api';
+
 
 require('dotenv').config();
 const morgan = require('morgan');
@@ -19,6 +21,9 @@ configViewEngine(app);
 
 //init webroute
 initWebRoute(app);
+
+//init API route 
+initAPIRoute(app);
 
 app.listen(port, () => {
     console.log('Example app listening att http://localhost:3000')

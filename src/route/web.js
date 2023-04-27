@@ -23,3 +23,4 @@ const initWebRoute = (app) => {
 
 // module.export = initWebRoute; 
 export default initWebRoute;
+
