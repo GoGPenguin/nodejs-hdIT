@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="http://localhost:3000">Home</a>
+        <a href="http://localhost:3000/upload"  class="active" >Upload</a>
+    </div>
+
+    <!-- Table -->
+    <div class = "upload-file-container" style="padding: 20px 0 0 20px">
+        <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+            <div>
+                <label for="">Avatar: </label>
+                <input type="file" name="profile_pic" id="">
+            </div>
+
+            <div>
+                <button class="button" type="submit">Update</button>
+            </div>
+        </form>
+        <div style="height: 50px;"></div>
+        <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+            <div>
+                <label for="">Select multiple: </label>
+                <input type="file" name="profile_pic" multiple>
+            </div>
+
+            <div>
+                <button class="button" type="submit" value="Upload">Update multiple</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
